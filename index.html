@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Garri Shop: order online</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap">
+<title>Amoke Cassava Flakes: order online</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
- <script>
-  window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
+<script>
+ window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -40,7 +40,7 @@
   <p class="note">Delivery fee is confirmed on WhatsApp and is not included in the total.</p>
  </form>
 </div>
-<footer>© <span id="yr"></span> <span id="biz2">Garri Shop</span></footer>
+<footer>© <span id="yr"></span> <span id="biz2">Amoke Cassava Flakes</span></footer>
 </div>
 
 <div id="bar"><a href="#order"><span id="count">0 items</span><span id="sum">View order · ₦0</span></a></div>
@@ -48,11 +48,11 @@
 <script>
 // ---- Edit these for the real business ----
 var BUSINESS = "Amoke Cassava Flakes";
-var WHATSAPP = "2348031155566"; // number with country code, no + or spaces
+var WHATSAPP = "2348031155566"; // country code + number, no + or spaces
 var PRODUCTS = [
  {id:"yellow", name:"Yellow garri", desc:"Fried with palm oil. Crisp and slightly tangy, good for drinking or eba.",
   sizes:[["1 derica",700],["Paint bucket",4500],["25 kg bag",38000]]},
- {id:"white", name:"White garri (Ijebu)", desc:"Sour, fine grain. Soaks well and swells nicely.",
+ {id:"white", name:"White garri (Ijebu)", desc:"Dry, tasty, sandless and crunchy.",
   sizes:[["1 derica",650],["Paint bucket",4200],["25 kg bag",35000]]},
  {id:"fine", name:"Fine garri for eba", desc:"Sieved extra fine so your eba comes out smooth.",
   sizes:[["1 derica",750],["Paint bucket",4800],["25 kg bag",40000]]}
@@ -62,7 +62,6 @@ var cart = {};
 var $ = function(id){return document.getElementById(id)};
 var money = function(n){return "₦" + n.toLocaleString("en-NG")};
 $("biz").textContent = $("biz2").textContent = BUSINESS;
-document.title = BUSINESS + ": order online";
 $("yr").textContent = new Date().getFullYear();
 
 function key(p,i){return p.id + ":" + i}
@@ -118,7 +117,7 @@ function problem(){
 $("form").addEventListener("submit", function(e){
  e.preventDefault();
  var p = problem(); $("err").textContent = p; if(p) return;
-window.location.href = "https://wa.me/" + WHATSAPP.replace(/\D/g,"") + "?text=" + encodeURIComponent(message());
+ window.location.href = "https://wa.me/" + WHATSAPP.replace(/\D/g,"") + "?text=" + encodeURIComponent(message());
 });
 $("copy").addEventListener("click", function(){
  var p = problem(); $("err").textContent = p; if(p) return;
