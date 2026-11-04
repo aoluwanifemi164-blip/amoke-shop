@@ -118,7 +118,7 @@ function problem(){
 $("form").addEventListener("submit", function(e){
  e.preventDefault();
  var p = problem(); $("err").textContent = p; if(p) return;
- window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message()), "_blank", "noopener");
+window.location.href = "https://wa.me/" + WHATSAPP.replace(/\D/g,"") + "?text=" + encodeURIComponent(message());
 });
 $("copy").addEventListener("click", function(){
  var p = problem(); $("err").textContent = p; if(p) return;
